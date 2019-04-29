@@ -4,13 +4,13 @@ from tensorboard import print_function
 from mongodb import Conexao
 
 #implementação do blueprint do tensorflow
-tensorflow_v1 = Blueprint(
-    "tensorflow",
+carga_v1 = Blueprint(
+    "carga",
     __name__,
-    url_prefix="/v1/tensorflow")
+    url_prefix="/v1/carga")
 
 
-@tensorflow_v1.route("/", methods=['OPTIONS'])
+@carga_v1.route("/", methods=['OPTIONS'])
 def options():
     response = make_response()
 
@@ -20,7 +20,7 @@ def options():
 
     return response
 
-@tensorflow_v1.route("/")
+@carga_v1.route("/")
 def index():
     resposta = {"status":200}
 
