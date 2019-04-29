@@ -20,8 +20,12 @@ def options():
 
     return response
 
-@carga_v1.route("/")
+@carga_v1.route("/pacientes")
 def index():
+    teste = Conexao()
+
+    teste.carga_pacientes()
+
     resposta = {"status":200}
 
     return  jsonify(resposta)
