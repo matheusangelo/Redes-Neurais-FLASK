@@ -1,3 +1,3 @@
-from mongodb.recurso import Conexao
+from mongodb.recurso import Carga
 
-__all__ = ['Conexao']
+__all__ = ['Carga']

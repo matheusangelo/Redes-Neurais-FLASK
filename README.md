@@ -23,15 +23,12 @@
 
 `pip install -r requirements.txt`
 
-## DynamoDB Local
+##MongoDB
 
-Para rodar o DynamoDB localmente, é preciso realizar o download
+`docker pull mongo`
 
-- [AWS Developer Guide - DynamoDB Local](https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/DynamoDBLocal.html)
+`docker run --name tcc -p 17017:27017 -d mongo`
 
-Após o download, extrair em um diretório, e utilizar o comando:
-
-- `java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb`
 
 ## Health Check e Ambiente
 
