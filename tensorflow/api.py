@@ -1,7 +1,7 @@
 import os
 from flask import Blueprint, jsonify, make_response
 from tensorboard import print_function
-from mongodb import Conexao
+from mongodb import Carga
 
 #implementação do blueprint do tensorflow
 tensorflow_v1 = Blueprint(
