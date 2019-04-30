@@ -10,6 +10,7 @@ app = Flask(__name__)
 # implementação dos modulos
 CORS(app, resources={r"/*": {"origins": "*"}})
 app.register_blueprint(carga_v1)
+app.register_blueprint(pacientes_v1)
 app.register_blueprint(tensorflow_v1)
 app.register_blueprint(pytorch_v1)
 

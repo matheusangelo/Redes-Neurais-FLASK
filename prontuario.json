@@ -1,0 +1,42 @@
+{
+    "prontuario": {
+        "id_paciente": "guid",
+        "nome": "teste",
+        "idade": 1,
+        "observacoes": "ABCDEFG",
+        "sintomas": [
+            {
+                "sintoma": "XPTO",
+                "grau": 0
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 1
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 2
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 3
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 4
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 5
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 5
+            },
+            {
+                "sintoma": "XPTO",
+                "grau": 5
+            }
+        ]
+    }
+}
