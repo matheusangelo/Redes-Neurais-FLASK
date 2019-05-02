@@ -11,43 +11,43 @@ class Carga:
                 "nome": "Matheus",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
             {
                 "nome": "Marcos",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
             {
                 "nome": "Lucas",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
             {
                 "nome": "Judas",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
             {
                 "nome": "Thiago",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
             {
                 "nome": "Pedro",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
             {
                 "nome": "Paulo",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "OK"
+                "status": "Não Processado"
             },
         ]
 

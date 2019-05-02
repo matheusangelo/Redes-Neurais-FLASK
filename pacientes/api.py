@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import json
 from .service import ListarPacientes
 
-# implementação do módulo pytorch
+# implementação do módulo pacientes
 pacientes_v1 = Blueprint("pacientes", __name__, url_prefix="/v1/pacientes")
 
 
