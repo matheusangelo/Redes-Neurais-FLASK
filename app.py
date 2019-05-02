@@ -3,6 +3,7 @@ from flask_cors import CORS
 from tensorflow import tensorflow_v1
 from pytorch import pytorch_v1
 from carga import carga_v1
+from pacientes import pacientes_v1
 
 
 app = Flask(__name__)
