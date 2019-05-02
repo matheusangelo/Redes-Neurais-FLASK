@@ -1,7 +1,9 @@
 from .models.pacientes import PacienteSchema, Conexao
+from flask import jsonify
 
 
 class ListarPacientes:
+    
     def process(self):
 
         instancia = Conexao()
@@ -11,4 +13,6 @@ class ListarPacientes:
         for x in pacientes.find():
             retorno.append(x)
 
-        print(retorno)
+        lista = PacienteSchema().dump(retorno, many=True)
+
+        return jsonify(lista)

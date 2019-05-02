@@ -9,5 +9,8 @@ pacientes_v1 = Blueprint("pacientes", __name__, url_prefix="/v1/pacientes")
 
 @pacientes_v1.route("/")
 def index_v1():
+
     lista_pacientes = ListarPacientes()
-    return "ok"
+    lista_pacientes = lista_pacientes.process()
+
+    return lista_pacientes
