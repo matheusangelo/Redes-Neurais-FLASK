@@ -20,6 +20,16 @@ def options():
 
     return response
 
+@carga_v1.route("/base")
+def criar_base():
+    carga = Carga()
+
+    carga.criar_base()
+
+    resposta = {"status":200}
+
+    return  jsonify(resposta)
+
 @carga_v1.route("/pacientes")
 def carga_pacientes():
     carga = Carga()

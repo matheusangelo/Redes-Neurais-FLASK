@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+import pymongo
 import uuid
 # from mock import mock_pacientes
 
@@ -6,6 +7,11 @@ id_carga = str(uuid.uuid4())
 
 
 class Carga:
+
+    def criar_base(self):
+        banco = pymongo.MongoClient('localhost', 17017)
+        criar_base = banco["tcc"]
+        print("OK")
 
     def carga_pacientes(self):
 
@@ -62,21 +68,21 @@ class Carga:
         ]
 
         # conexao com o banco
-        cliente=MongoClient('localhost', 17017)
+        cliente = MongoClient('localhost', 17017)
 
         # selecionando o banco
-        banco=cliente['tcc']
+        banco = cliente['tcc']
 
         # acessando a respectiva tabela
-        prontuario=banco['pacientes']
+        prontuario = banco['pacientes']
 
-        paciente_id=prontuario.insert_many(carga_pacientes)
+        paciente_id = prontuario.insert_many(carga_pacientes)
 
         print("ok")
 
     def carga_prontuario(self):
 
-        carga_prontuarios=[
+        carga_prontuarios = [
             {
                 "prontuario": {
                     "id_paciente": id_carga,
@@ -122,22 +128,22 @@ class Carga:
         ]
 
         # conexao com o banco
-        cliente=MongoClient('localhost', 17017)
+        cliente = MongoClient('localhost', 17017)
 
         # selecionando o banco
-        banco=cliente['tcc']
+        banco = cliente['tcc']
 
         # acessando a respectiva tabela
-        prontuario=banco['prontuarios']
+        prontuario = banco['prontuarios']
 
-        prontuario_id=prontuario.insert_many(carga_prontuarios)
+        prontuario_id = prontuario.insert_many(carga_prontuarios)
 
         print("ok")
 
     def carga_doencas(self):
 
         # json com as doenças
-        carga_doencas=[
+        carga_doencas = [
             {
                 "id": "1",
                 "nome": "Matheus",
@@ -190,14 +196,14 @@ class Carga:
         ]
 
         # conexao com o banco
-        cliente=MongoClient('localhost', 17017)
+        cliente = MongoClient('localhost', 17017)
 
         # selecionando o banco
-        banco=cliente['tcc']
+        banco = cliente['tcc']
 
         # acessando a respectiva tabela
-        doenca=banco['doencas']
+        doenca = banco['doencas']
 
-        doenca_id=prontuario.insert_many(carga_doencas)
+        doenca_id = prontuario.insert_many(carga_doencas)
 
         print("ok")
