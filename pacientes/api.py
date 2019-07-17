@@ -31,7 +31,7 @@ def criar_pacientes():
     lista_pacientes = ListarPacientes()
     lista_pacientes = lista_pacientes.process()
 
-    return lista_pacientes
+    return 
 
 
 @pacientes_v1.route("/", methods=["DELETE"])
