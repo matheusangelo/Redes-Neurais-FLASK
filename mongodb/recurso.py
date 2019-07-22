@@ -17,49 +17,42 @@ class Carga:
 
         carga_pacientes = [
             {
-                "id": id_carga,
                 "nome": "Matheus",
                 "idade": "27",
                 "prioridade": "Alta",
                 "status": "Não Processado"
             },
             {
-                "id": str(uuid.uuid4()),
                 "nome": "Marcos",
                 "idade": "27",
                 "prioridade": "Alta",
                 "status": "Não Processado"
             },
             {
-                "id": str(uuid.uuid4()),
                 "nome": "Lucas",
                 "idade": "27",
                 "prioridade": "Alta",
                 "status": "Não Processado"
             },
             {
-                "id": str(uuid.uuid4()),
                 "nome": "Judas",
                 "idade": "27",
                 "prioridade": "Alta",
                 "status": "Não Processado"
             },
             {
-                "id": str(uuid.uuid4()),
                 "nome": "Thiago",
                 "idade": "27",
                 "prioridade": "Alta",
                 "status": "Não Processado"
             },
             {
-                "id": str(uuid.uuid4()),
                 "nome": "Pedro",
                 "idade": "27",
                 "prioridade": "Alta",
                 "status": "Não Processado"
             },
             {
-                "id": str(uuid.uuid4()),
                 "nome": "Paulo",
                 "idade": "27",
                 "prioridade": "Alta",
