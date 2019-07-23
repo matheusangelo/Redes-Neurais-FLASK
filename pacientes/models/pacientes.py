@@ -11,10 +11,9 @@ class Conexao:
         self.nome_collection = os.getenv("COLLECTION_PACIENTES")
 
     def process(self):
-        print(os.getenv("AMBIENTE"))
-        cliente = MongoClient(self.ambiente,17017)
-        banco = cliente[self.banco]
-        pacientes = banco[self.nome_collection]
+        cliente = MongoClient("localhost", 17017)
+        banco = cliente["tcc"]
+        pacientes = banco["pacientes"]
 
         return pacientes
 
