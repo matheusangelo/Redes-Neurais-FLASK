@@ -5,7 +5,7 @@ from bson.objectid import ObjectId
 INDEX_DADOS = 0
 
 
-class Prontuario:
+class Doenca:
 
     def __init__(self):
         self.instancia = Conexao()

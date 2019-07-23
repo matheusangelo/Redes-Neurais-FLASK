@@ -200,6 +200,6 @@ class Carga:
         # acessando a respectiva tabela
         doenca = banco['doencas']
 
-        doenca_id = prontuario.insert_many(carga_doencas)
+        doenca_id = doenca.insert_many(carga_doencas)
 
         print("ok")

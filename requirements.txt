@@ -5,3 +5,5 @@ coverage==4.5.1
 mock==2.0.0
 pymongo
 flask
+python-dotenv
+
