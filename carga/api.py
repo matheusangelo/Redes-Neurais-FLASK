@@ -3,11 +3,15 @@ from flask import Blueprint, jsonify, make_response
 from tensorboard import print_function
 from mongodb import Carga
 
-#implementação do blueprint do tensorflow
+# implementação do blueprint do tensorflow
 carga_v1 = Blueprint(
     "carga",
     __name__,
     url_prefix="/v1/carga")
+
+resposta = {
+    "status": 200
+}
 
 
 @carga_v1.route("/", methods=['OPTIONS'])
@@ -20,15 +24,15 @@ def options():
 
     return response
 
+
 @carga_v1.route("/base")
 def criar_base():
     carga = Carga()
 
     carga.criar_base()
 
-    resposta = {"status":200}
+    return jsonify(resposta)
 
-    return  jsonify(resposta)
 
 @carga_v1.route("/pacientes")
 def carga_pacientes():
@@ -36,9 +40,8 @@ def carga_pacientes():
 
     carga.carga_pacientes()
 
-    resposta = {"status":200}
+    return jsonify(resposta)
 
-    return  jsonify(resposta)
 
 @carga_v1.route("/prontuarios")
 def carga_prontuarios():
@@ -46,9 +49,8 @@ def carga_prontuarios():
 
     carga.carga_prontuario()
 
-    resposta = {"status":200}
+    return jsonify(resposta)
 
-    return  jsonify(resposta)
 
 @carga_v1.route("/doencas")
 def carga_doencas():
@@ -56,6 +58,4 @@ def carga_doencas():
 
     carga.carga_doencas()
 
-    resposta = {"status":200}
-
-    return  jsonify(resposta)
+    return jsonify(resposta)
