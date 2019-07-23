@@ -21,43 +21,50 @@ class Carga:
                 "nome": "Matheus",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
             {
                 "nome": "Marcos",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
             {
                 "nome": "Lucas",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
             {
                 "nome": "Judas",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
             {
                 "nome": "Thiago",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
             {
                 "nome": "Pedro",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
             {
                 "nome": "Paulo",
                 "idade": "27",
                 "prioridade": "Alta",
-                "status": "Não Processado"
+                "status": "Não Processado",
+                "id_prontuario": None
             },
         ]
 
@@ -78,46 +85,41 @@ class Carga:
 
         carga_prontuarios = [
             {
-                "prontuario": {
-                    "id_paciente": id_carga,
-                    "nome": "teste",
-                    "idade": 1,
-                    "observacoes": "ABCDEFG",
-                    "sintomas": [
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 0
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 1
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 2
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 3
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 4
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 5
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 5
-                        },
-                        {
-                            "sintoma": "XPTO",
-                            "grau": 5
-                        }
-                    ]
-                }
+                "id_paciente": "102030",
+                "sintomas": [
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 0
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 1
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 2
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 3
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 4
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 5
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 5
+                    },
+                    {
+                        "sintoma": "XPTO",
+                        "grau": 5
+                    }
+                ]
             }
         ]
 

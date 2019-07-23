@@ -15,8 +15,8 @@ class Prontuario:
 
         retorno = []
 
-        for paciente in self.prontuarios.find():
-            retorno.append(paciente)
+        for prontuario in self.prontuarios.find():
+            retorno.append(prontuario)
 
         lista = ProntuarioSchema().dump(retorno, many=True)
 
