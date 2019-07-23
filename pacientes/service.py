@@ -2,15 +2,19 @@ from .models.pacientes import PacienteSchema, Conexao
 from flask import jsonify
 from bson.objectid import ObjectId
 
+INDEX_DADOS = 0
 
-class ListarPacientes:
+
+class Paciente:
+    def __init__(self):
+        self.instancia = Conexao()
+        self.pacientes = self.instancia.process()
 
     def process(self):
-        instancia = Conexao()
-        pacientes = instancia.process()
+
         retorno = []
 
-        for paciente in pacientes.find():
+        for paciente in self.pacientes.find():
             retorno.append(paciente)
 
         lista = PacienteSchema().dump(retorno, many=True)
@@ -18,43 +22,35 @@ class ListarPacientes:
         return jsonify(lista)
 
     def process_by_id(self, id):
-        instancia = Conexao()
-        pacientes = instancia.process()
         retorno = []
 
-        for paciente in pacientes.find({"_id":ObjectId(id)}):
+        for paciente in self.pacientes.find({"_id": ObjectId(id)}):
             retorno.append(paciente)
 
         lista = PacienteSchema().dump(retorno, many=True)
 
-        return jsonify(lista[0])
+        return jsonify(lista[INDEX_DADOS])
 
+    def process_criar(self, data):
+        dados = PacienteSchema().loads(data)
 
-class CriarPaciente:
+        lista = [v for v in dados]
 
-    def process(self, data):
-        instancia = Conexao()
-        pacientes = instancia.process()
-        insert = pacientes.insert_one(data)
-
-        return "ok"
-
-
-class DeletarPaciente:
-
-    def process(self, id):
-        instancia = Conexao()
-        pacientes = instancia.process()
-        delete = pacientes.delete_one({"_id":ObjectId(id)})
+        insert = self.pacientes.insert_one(lista[INDEX_DADOS])
 
         return "ok"
 
+    def process_deletar(self, id):
+        delete = self.pacientes.delete_one({"_id": ObjectId(id)})
 
-class EditarPacientes:
+        return "ok"
 
-    def process(self, data):
-        instancia = Conexao()
-        pacientes = instancia.process()
+    def process_editar(self, data):
+        dados = PacienteSchema().loads(data)
+
+        lista = [v for v in dados]
+
+        data = lista[INDEX_DADOS]
 
         filtro = {"_id": ObjectId(data['_id'])}
 
@@ -62,9 +58,9 @@ class EditarPacientes:
 
         novos_valores = {"$set": retorno}
 
-        pacientes.update_one(filtro, novos_valores)
+        self.pacientes.update_one(filtro, novos_valores)
 
-        for x in pacientes.find():
+        for x in self.pacientes.find():
             print(x)
 
         return "ok"
