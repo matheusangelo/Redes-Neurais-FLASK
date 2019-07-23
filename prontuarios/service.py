@@ -35,6 +35,8 @@ class Prontuario:
     def process_criar(self, data):
         dados = ProntuarioSchema().loads(data)
 
+        print("\n\n\n\n\n",dados,"\n\n\n\n\n")
+
         lista = [v for v in dados]
 
         insert = self.prontuarios.insert_one(lista[INDEX_DADOS])
@@ -68,9 +70,7 @@ class Prontuario:
 
     def dict_update(self, data):
         dados = {
-            "idade": data["idade"],
-            "nome": data["nome"],
-            "prioridade": data["prioridade"],
-            "status": data["status"]
+            "id_paciente": data["id_paciente"],
+            "sintomas": data["sintomas"],
         }
         return dados
