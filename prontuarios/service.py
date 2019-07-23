@@ -1,94 +1,76 @@
 from .models.prontuarios import ProntuarioSchema, Conexao
 from flask import jsonify
+from bson.objectid import ObjectId
+
+INDEX_DADOS = 0
 
 
-class ListarProntuarios:
-    
+class Prontuario:
+
+    def __init__(self):
+        self.instancia = Conexao()
+        self.prontuarios = self.instancia.process()
+
     def process(self):
 
-        instancia = Conexao()
-        pacientes = instancia.process()
         retorno = []
-        
-        for x in pacientes.find():
-            retorno.append(x)
+
+        for paciente in self.prontuarios.find():
+            retorno.append(paciente)
 
         lista = ProntuarioSchema().dump(retorno, many=True)
 
         return jsonify(lista)
 
+    def process_by_id(self, id):
+        retorno = []
 
-# class ListarPacientes:
+        for paciente in self.prontuarios.find({"_id": ObjectId(id)}):
+            retorno.append(paciente)
 
-#     def process(self):
-#         instancia = Conexao()
-#         pacientes = instancia.process()
-#         retorno = []
+        lista = ProntuarioSchema().dump(retorno, many=True)
 
-#         for paciente in pacientes.find():
-#             retorno.append(paciente)
+        return jsonify(lista[INDEX_DADOS])
 
-#         lista = PacienteSchema().dump(retorno, many=True)
+    def process_criar(self, data):
+        dados = ProntuarioSchema().loads(data)
 
-#         return jsonify(lista)
+        lista = [v for v in dados]
 
-#     def process_by_id(self, id):
-#         instancia = Conexao()
-#         pacientes = instancia.process()
-#         retorno = []
+        insert = self.prontuarios.insert_one(lista[INDEX_DADOS])
 
-#         for paciente in pacientes.find({"_id":ObjectId(id)}):
-#             retorno.append(paciente)
+        return "ok"
 
-#         lista = PacienteSchema().dump(retorno, many=True)
+    def process_deletar(self, id):
+        delete = self.prontuarios.delete_one({"_id": ObjectId(id)})
 
-#         return jsonify(lista[0])
+        return "ok"
 
+    def process_editar(self, data):
+        dados = ProntuarioSchema().loads(data)
 
-# class CriarPaciente:
+        lista = [v for v in dados]
 
-#     def process(self, data):
-#         instancia = Conexao()
-#         pacientes = instancia.process()
-#         insert = pacientes.insert_one(data)
+        data = lista[INDEX_DADOS]
 
-#         return "ok"
+        filtro = {"_id": ObjectId(data['_id'])}
 
+        retorno = self.dict_update(data)
 
-# class DeletarPaciente:
+        novos_valores = {"$set": retorno}
 
-#     def process(self, id):
-#         instancia = Conexao()
-#         pacientes = instancia.process()
-#         delete = pacientes.delete_one({"_id":ObjectId(id)})
+        self.prontuarios.update_one(filtro, novos_valores)
 
-#         return "ok"
+        for x in self.prontuarios.find():
+            print(x)
 
+        return "ok"
 
-# class EditarPacientes:
-
-#     def process(self, data):
-#         instancia = Conexao()
-#         pacientes = instancia.process()
-
-#         filtro = {"_id": ObjectId(data['_id'])}
-
-#         retorno = self.dict_update(data)
-
-#         novos_valores = {"$set": retorno}
-
-#         pacientes.update_one(filtro, novos_valores)
-
-#         for x in pacientes.find():
-#             print(x)
-
-#         return "ok"
-
-#     def dict_update(self, data):
-#         dados = {
-#             "idade": data["idade"],
-#             "nome": data["nome"],
-#             "prioridade": data["prioridade"],
-#             "status": data["status"]
-#         }
-#         return dados
+    def dict_update(self, data):
+        dados = {
+            "idade": data["idade"],
+            "nome": data["nome"],
+            "prioridade": data["prioridade"],
+            "status": data["status"]
+        }
+        return dados

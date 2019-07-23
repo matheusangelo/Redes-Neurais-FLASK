@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import pymongo
 import uuid
+
 # from mock import mock_pacientes
 
 id_carga = str(uuid.uuid4())

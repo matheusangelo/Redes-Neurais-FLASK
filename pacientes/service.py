@@ -2,6 +2,7 @@ from .models.pacientes import PacienteSchema, Conexao
 from flask import jsonify
 from bson.objectid import ObjectId
 
+
 INDEX_DADOS = 0
 
 
