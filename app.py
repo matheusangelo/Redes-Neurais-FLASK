@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from tensorflow import tensorflow_v1
+from tensorflow_treinamento import tensorflow_v1
 from carga import carga_v1
 from pacientes import pacientes_v1
 from prontuarios import prontuarios_v1

@@ -3,7 +3,7 @@
 1. [Python 3.7](https://www.python.org/downloads/release/python-370/)
 2. [virtualenv](https://virtualenv.pypa.io/en/stable/)
 3. [Docker](https://www.docker.com/)
-4. [DynamoDB]()
+
 
 ## Instalando dependências do ambiente de dev
 
@@ -29,20 +29,6 @@
 
 `docker run --name tcc -p 17017:27017 -d mongo`
 
-
-## Health Check e Ambiente
-
-Para acessar o status da API, foi disponiblizado o endpoint `/healhcheck`
-Exemplo de retorno:
-
-```json
-{
-    hostname: "localhost",
-    status: "success",
-    timestamp: 1540318049.0074956,
-    results: []
-}
-```
 
 ## Instalando Tensorflow
 - `pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.12.0-py3-none-any.whl`
