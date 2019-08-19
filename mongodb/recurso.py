@@ -203,3 +203,26 @@ class Carga:
         doenca_id = doenca.insert_many(carga_doencas)
 
         print("ok")
+
+    def carga_auth(self):
+
+        usuarios = [
+            {
+                "login": "admin",
+                "senha": "admin",
+                "profile": "especialista"
+            }
+        ]
+
+        # conexao com o banco
+        cliente = MongoClient('localhost', 17017)
+
+        # selecionando o banco
+        banco = cliente['tcc']
+
+        # acessando a respectiva tabela
+        prontuario = banco['usuarios']
+
+        prontuario_id = prontuario.insert_many(carga_prontuarios)
+
+        print("ok")
