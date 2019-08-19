@@ -1,8 +1,6 @@
 import os
 from flask import Blueprint, jsonify, make_response
-from tensorboard import print_function
 from mongodb import Carga
-import jwt
 
 # implementação do jwt para autenticações na aplicação
 auth_v1 = Blueprint(
@@ -53,16 +51,6 @@ def criar_pacientes():
         return(NameError)
 
     return "Atualizado"
-
-
-@auth_v1.route("/<id>", methods=["DELETE"])
-def deletar_pacientes(id):
-    try:
-        _objPaciente.process_deletar(id)
-    except NameError:
-        return(NameError)
-
-    return "Deletado"
 
 
 @auth_v1.route("/<id>", methods=["GET"])
