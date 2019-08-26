@@ -20,7 +20,7 @@ class Conexao:
 
 class PacienteSchema(Schema):
     _id = fields.Str()
-    nome = fields.Str()
+    nome_paciente = fields.Str()
     idade = fields.Str()
     sexo = fields.Str()
     prioridade = fields.Str()
@@ -37,8 +37,8 @@ class PacienteSchema(Schema):
 # 	identificador:
 # 	dt_atendimento:
 # 	observacoes:
-# 	avaliacao: [
+# 	avaliacao: [{
 # 		sintomas:
-# 		intensidade:
+# 		intensidade:}
 # 	]
 # }
