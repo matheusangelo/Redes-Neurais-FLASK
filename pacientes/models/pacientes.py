@@ -22,5 +22,23 @@ class PacienteSchema(Schema):
     _id = fields.Str()
     nome = fields.Str()
     idade = fields.Str()
+    sexo = fields.Str()
     prioridade = fields.Str()
     status = fields.Str()
+
+
+# {
+# 	_id:
+# 	nome_paciente:
+# 	idade:
+# 	rg:
+# 	cpf:
+# 	sexo:
+# 	identificador:
+# 	dt_atendimento:
+# 	observacoes:
+# 	avaliacao: [
+# 		sintomas:
+# 		intensidade:
+# 	]
+# }
