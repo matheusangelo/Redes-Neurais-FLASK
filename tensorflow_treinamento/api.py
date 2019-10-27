@@ -33,7 +33,6 @@ def index():
     
     #self.estrutura_rede.__setattr__('value', estrutura_rede)
     classificador = model_from_json(estrutura_rede)
-    print("\n\n\n\n\n",estrutura_rede,"\n\n\n\n")
     classificador.load_weights('tensorflow_treinamento\classificador_breast.h5')
 
     #Uso em um registro
