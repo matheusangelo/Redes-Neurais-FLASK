@@ -20,51 +20,309 @@ class Carga:
             {
                 "nome": "Matheus",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "data_atendimento": "10/10/2010",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "identificador": "SUS",
+                "observacoes": "usuario-carga",
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
             {
                 "nome": "Marcos",
+                "data_atendimento": "10/10/2010",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "identificador": "SUS",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "observacoes": "usuario-carga",
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
             {
                 "nome": "Lucas",
+                "data_atendimento": "10/10/2010",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "identificador": "SUS",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
             {
                 "nome": "Judas",
+                "data_atendimento": "10/10/2010",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "identificador": "SUS",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "observacoes": "usuario-carga",
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
             {
                 "nome": "Thiago",
+                "data_atendimento": "10/10/2010",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "identificador": "SUS",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "observacoes": "usuario-carga",
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
             {
                 "nome": "Pedro",
+                "data_atendimento": "10/10/2010",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "identificador": "SUS",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "observacoes": "usuario-carga",
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
             {
                 "nome": "Paulo",
+                "data_atendimento": "10/10/2010",
                 "idade": "27",
-                "prioridade": "Alta",
+                "rg": "48-885-333-9",
+                "cpf": "407.777.768-02",
+                "sexo": "Masculino",
+                "identificador": "SUS",
                 "status": "Não Processado",
-                "id_prontuario": None
+                "observacoes": "usuario-carga",
+                "status": False,
+                "inputs": {
+                    "value1": 10,
+                    "value2": 10,
+                    "value3": 10,
+                    "value4": 10,
+                    "value5": 10,
+                    "value6": 10,
+                    "value7": 10,
+                    "value8": 10,
+                    "value9": 10,
+                    "value10": 10,
+                    "value11": 10,
+                    "value12": 10,
+                    "value13": 10,
+                    "value14": 10,
+                    "value15": 10,
+                    "value16": 10,
+                    "value17": 10,
+                    "value18": 10,
+                    "value19": 10,
+                    "value20": 10,
+                    "value21": 10,
+                    "value22": 10,
+                    "value23": 10,
+                    "value24": 10,
+                    "value25": 10,
+                    "value26": 10,
+                    "value27": 10,
+                    "value28": 10,
+                    "value29": 10,
+                    "value30": 10,
+                }
             },
         ]
 
@@ -78,129 +336,6 @@ class Carga:
         prontuario = banco['pacientes']
 
         paciente_id = prontuario.insert_many(carga_pacientes)
-
-        print("ok")
-
-    def carga_prontuario(self):
-
-        carga_prontuarios = [
-            {
-                "id_paciente": "102030",
-                "sintomas": [
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 0
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 1
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 2
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 3
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 4
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 5
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 5
-                    },
-                    {
-                        "sintoma": "XPTO",
-                        "grau": 5
-                    }
-                ]
-            }
-        ]
-
-        # conexao com o banco
-        cliente = MongoClient('localhost', 17017)
-
-        # selecionando o banco
-        banco = cliente['tcc']
-
-        # acessando a respectiva tabela
-        prontuario = banco['prontuarios']
-
-        prontuario_id = prontuario.insert_many(carga_prontuarios)
-
-        print("ok")
-
-    def carga_doencas(self):
-
-        # json com as doenças
-        carga_doencas = [
-            {
-                "id": "1",
-                "nome": "Matheus",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-            {
-                "id": "2",
-                "nome": "Marcos",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-            {
-                "id": "3",
-                "nome": "Lucas",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-            {
-                "id": "4",
-                "nome": "Judas",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-            {
-                "id": "5",
-                "nome": "Thiago",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-            {
-                "id": "6",
-                "nome": "Pedro",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-            {
-                "id": "7",
-                "nome": "Paulo",
-                "idade": "27",
-                "prioridade": "Alta",
-                "status": "OK"
-            },
-        ]
-
-        # conexao com o banco
-        cliente = MongoClient('localhost', 17017)
-
-        # selecionando o banco
-        banco = cliente['tcc']
-
-        # acessando a respectiva tabela
-        doenca = banco['doencas']
-
-        doenca_id = doenca.insert_many(carga_doencas)
 
         print("ok")
 
@@ -223,6 +358,6 @@ class Carga:
         # acessando a respectiva tabela
         prontuario = banco['usuarios']
 
-        prontuario_id = prontuario.insert_many(carga_prontuarios)
+        # prontuario_id = prontuario.insert_many(carga_prontuarios)
 
         print("ok")

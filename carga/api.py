@@ -41,21 +41,3 @@ def carga_pacientes():
     carga.carga_pacientes()
 
     return jsonify(resposta)
-
-
-@carga_v1.route("/prontuarios")
-def carga_prontuarios():
-    carga = Carga()
-
-    carga.carga_prontuario()
-
-    return jsonify(resposta)
-
-
-@carga_v1.route("/doencas")
-def carga_doencas():
-    carga = Carga()
-
-    carga.carga_doencas()
-
-    return jsonify(resposta)

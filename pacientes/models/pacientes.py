@@ -18,13 +18,51 @@ class Conexao:
         return pacientes
 
 
+class InputsSchema(Schema):
+    value1 = fields.Float()
+    value2 = fields.Float()
+    value3 = fields.Float()
+    value4 = fields.Float()
+    value5 = fields.Float()
+    value6 = fields.Float()
+    value7 = fields.Float()
+    value8 = fields.Float()
+    value9 = fields.Float()
+    value10 = fields.Float()
+    value11 = fields.Float()
+    value12 = fields.Float()
+    value13 = fields.Float()
+    value14 = fields.Float()
+    value15 = fields.Float()
+    value16 = fields.Float()
+    value17 = fields.Float()
+    value18 = fields.Float()
+    value19 = fields.Float()
+    value20 = fields.Float()
+    value21 = fields.Float()
+    value22 = fields.Float()
+    value23 = fields.Float()
+    value24 = fields.Float()
+    value25 = fields.Float()
+    value26 = fields.Float()
+    value27 = fields.Float()
+    value28 = fields.Float()
+    value29 = fields.Float()
+    value30 = fields.Float()
+
+
 class PacienteSchema(Schema):
     _id = fields.Str()
     nome = fields.Str()
     idade = fields.Str()
+    identificador = fields.Str()
+    data_atendimento = fields.Str()
+    observacoes = fields.Str()
+    rg = fields.Str()
+    cpf = fields.Str()
     sexo = fields.Str()
-    prioridade = fields.Str()
     status = fields.Str()
+    inputs = fields.Nested(InputsSchema)
 
 
 # {
