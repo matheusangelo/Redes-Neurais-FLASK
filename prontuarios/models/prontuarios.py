@@ -13,11 +13,14 @@ class Conexao:
 
 
 class SintomasSchema(Schema):
-    sintoma = fields.Str()
-    grau = fields.Int()
+    chave = fields.Str()
+    valor = fields.Int()
 
 
 class ProntuarioSchema(Schema):
     _id = fields.Str()
-    id_paciente = fields.Str()
+    idade = fields.Str()
+    idenficador = fields.Str()
+    nome = fields.Str()
+    sexo = fields.Str()
     sintomas = fields.List(fields.Nested(SintomasSchema))

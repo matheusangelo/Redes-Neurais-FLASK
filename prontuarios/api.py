@@ -10,7 +10,7 @@ prontuarios_v1 = Blueprint("prontuarios", __name__,
 _objProntuario = Prontuario()
 
 
-@prontuarios_v1.route("/listar", methods=["GET"])
+@prontuarios_v1.route("/", methods=["GET"])
 def index_v1():
 
     lista_pacientes = _objProntuario.process()
@@ -18,25 +18,25 @@ def index_v1():
     return lista_pacientes
 
 
-@prontuarios_v1.route("/criar", methods=["POST"])
+@prontuarios_v1.route("/", methods=["POST"])
 def retornar_pacientes():
     try:
+        print(request.data)
         _objProntuario.process_criar(request.data)
     except NameError:
         return(NameError)
 
-    return "Criado"
+    return  jsonify({"status":200})
 
 
-@prontuarios_v1.route("/editar", methods=["PUT"])
+@prontuarios_v1.route("/", methods=["PUT"])
 def criar_pacientes():
     try:
         _objProntuario.process_editar(request.data)
     except NameError:
         return(NameError)
 
-    return "Atualizado"
-
+    return jsonify({"status":200})
 
 @prontuarios_v1.route("/<id>", methods=["DELETE"])
 def deletar_pacientes(id):

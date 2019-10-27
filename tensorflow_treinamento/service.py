@@ -1,26 +1,32 @@
-import tensorflow as tf
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 16 16:15:32 2019
 
-#criação do grafo
-grafo = tf.Graph()
+@author: firanzi
+"""
+import numpy as np
+from keras.models import model_from_json
+import pandas as pd
 
-'''
-Uma tf.Session encapsula o ambiente onde as operações do grafo são executadas e os tensors são avaliados.
- Para isso a gente precisa definir qual o grafo que vai ser usado na sessão.
-'''
-#utilizando o grafo e inserindo os valores
+class RedeNeural:
+    def ProcessarRede(self):
+        arquivo = open('tensorflow_treinamento\classificador_breast.json','r')
+        estrutura_rede = arquivo.read()
+        arquivo.close()
 
-'''
-Para executar as operações você vai usar o método tf.Session.run(). 
-Esse método executa um ‘passo’ da computação do grafo. 
-Definimos o que queremos rodar através do argumento fetches. 
-Ele pode ser um elemento do grafo, uma lista arbitrária, um dicionário, etc. No nosso caso vamos rodar um passo da nossa adição:
-'''
+        help(self)
+        #self.estrutura_rede.__setattr__('value', estrutura_rede)
+        classificador = model_from_json(estrutura_rede)
+        classificador.load_weights('tensorflow_treinamento\classificador_breast.h5')
 
-with tf.Session(graph=grafo) as sessao:
-    x = tf.constant([1,3,6]) 
-    y = tf.constant([1,1,1])
+        #Uso em um registro
+        #Passa um NP ARRAY para uma variável
+        novo = np.array([[0.3, 0.2, 0.5, 0.6, 1, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7],[0.3, 0.2, 0.5, 0.6, 1, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7]])
 
-#realizando as operações
-    operacao = tf.add(x,y)
-    resultado = sessao.run(fetches=operacao)
-    print(resultado)
+        #Envia usar esta variável nesta linha de comando
+        previsao = classificador.predict(novo)
+
+        print("\n\n\n\n\n",previsao,"\n\n\n\n\n\n\n")
+
+        return "ok"
+
