@@ -46,18 +46,19 @@ class Paciente:
 
         return "ok"
 
-    def process_editar(self, data):
+    def process_editar(self, data,id):
         dados = PacienteSchema().loads(data)
-
         lista = [v for v in dados]
 
         data = lista[INDEX_DADOS]
 
-        filtro = {"_id": ObjectId(data['_id'])}
+        filtro = {"_id": ObjectId(id)}
 
-        retorno = self.dict_update(data)
+        print("\n\n\n\n\n",data,"\n\n\n\n\n\n")
+        retorno = self.dict_update(dados)
 
         novos_valores = {"$set": retorno}
+
 
         self.pacientes.update_one(filtro, novos_valores)
 
@@ -68,9 +69,14 @@ class Paciente:
 
     def dict_update(self, data):
         dados = {
-            "idade": data["idade"],
-            "nome": data["nome"],
-            "prioridade": data["prioridade"],
-            "status": data["status"]
+            "nome" : data['nome'],
+            "idade" : data['idade'],
+            "identificador" : data['identificador'],
+            "data_atendimento" : data['data_atendimento'],
+            "observacoes" : data['observacoes'],
+            "rg" : data['rg'],
+            "cpf" : data['cpf'],
+            "sexo" : data['sexo'],
+            "inputs": data['inputs'],
         }
         return dados

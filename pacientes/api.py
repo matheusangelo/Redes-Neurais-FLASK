@@ -28,10 +28,10 @@ def retornar_pacientes():
     return "Criado"
 
 
-@pacientes_v1.route("/", methods=["PUT"])
-def criar_pacientes():
+@pacientes_v1.route("/<id>", methods=["PUT"])
+def criar_pacientes(id):
     try:
-        _objPaciente.process_editar(request.data)
+        _objPaciente.process_editar(request.data,id)
     except NameError:
         return(NameError)
 
