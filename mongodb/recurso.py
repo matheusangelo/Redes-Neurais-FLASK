@@ -28,6 +28,7 @@ class Carga:
                 "identificador": "SUS",
                 "observacoes": "usuario-carga",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,
@@ -72,6 +73,7 @@ class Carga:
                 "status": "Não Processado",
                 "observacoes": "usuario-carga",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,
@@ -115,6 +117,7 @@ class Carga:
                 "identificador": "SUS",
                 "status": "Não Processado",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,
@@ -159,6 +162,7 @@ class Carga:
                 "status": "Não Processado",
                 "observacoes": "usuario-carga",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,
@@ -203,6 +207,7 @@ class Carga:
                 "status": "Não Processado",
                 "observacoes": "usuario-carga",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,
@@ -247,6 +252,7 @@ class Carga:
                 "status": "Não Processado",
                 "observacoes": "usuario-carga",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,
@@ -291,6 +297,7 @@ class Carga:
                 "status": "Não Processado",
                 "observacoes": "usuario-carga",
                 "status": False,
+                "resultados": False,
                 "inputs": {
                     "value1": 10,
                     "value2": 10,

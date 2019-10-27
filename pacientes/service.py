@@ -77,5 +77,7 @@ class Paciente:
             "cpf" : data['cpf'],
             "sexo" : data['sexo'],
             "inputs": data['inputs'],
+            "status": False,
+            "resultado": False,
         }
         return dados

@@ -62,21 +62,5 @@ class PacienteSchema(Schema):
     cpf = fields.Str()
     sexo = fields.Str()
     status = fields.Str()
+    resultado = fields.Str()
     inputs = fields.Nested(InputsSchema)
-
-
-# {
-# 	_id:
-# 	nome_paciente:
-# 	idade:
-# 	rg:
-# 	cpf:
-# 	sexo:
-# 	identificador:
-# 	dt_atendimento:
-# 	observacoes:
-# 	avaliacao: [{
-# 		sintomas:
-# 		intensidade:}
-# 	]
-# }
