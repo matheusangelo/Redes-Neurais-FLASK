@@ -36,8 +36,8 @@ class Paciente:
         dados = PacienteSchema().loads(data)
 
         lista = [v for v in dados]
-
-        insert = self.pacientes.insert_one(lista[INDEX_DADOS])
+        
+        insert = self.pacientes.insert_one(dados)
 
         return "ok"
 
