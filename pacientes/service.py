@@ -54,7 +54,6 @@ class Paciente:
 
         filtro = {"_id": ObjectId(id)}
 
-        print("\n\n\n\n\n",data,"\n\n\n\n\n\n")
         retorno = self.dict_update(dados)
 
         novos_valores = {"$set": retorno}
