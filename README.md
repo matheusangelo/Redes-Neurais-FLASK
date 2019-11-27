@@ -36,3 +36,8 @@
 ## Instalando Pytorch
 - `pip3 install https://download.pytorch.org/whl/cu90/torch-1.0.1-cp36-cp36m-win_amd64.whl`
 -  `pip3 install torchvision`
+
+
+##Iniciar o projeto
+
+`flask run --without-threads`

@@ -1,5 +1,6 @@
 import os
 from flask import Blueprint, jsonify, make_response, request
+from .models.pacientes import PacienteSchema
 from tensorboard import print_function
 from mongodb import Carga
 import numpy as np
@@ -30,18 +31,30 @@ def index():
     arquivo = open('tensorflow_treinamento\classificador_breast.json','r')
     estrutura_rede = arquivo.read()
     arquivo.close()
-    
-    #self.estrutura_rede.__setattr__('value', estrutura_rede)
+
     classificador = model_from_json(estrutura_rede)
     classificador.load_weights('tensorflow_treinamento\classificador_breast.h5')
+    print("\n\n\n\n\n\n","Depois","\n\n\n\n\n\n")
+    dados = PacienteSchema().loads(request.data)
+    entradas = dados['lista']
+    print("\n\n\n\n\n\n","dados","\n\n\n\n\n\n")
+    
+    matrix_entrada = []
+    matrix_entrada.append(entradas)
 
+    print("\n\n\n\n\n", matrix_entrada,"\n\n\n\n\n")
     #Uso em um registro
     #Passa um NP ARRAY para uma variável
-    novo = np.array([[0.3, 0.2, 0.5, 0.6, 1, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7],[0.3, 0.2, 0.5, 0.6, 1, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7,0.3, 0.2, 0.5, 0.6, 0.7, 0.1, 0.5, 0.3, 1, 0.7]])
+    novo = np.array(matrix_entrada)
 
     #Envia usar esta variável nesta linha de comando
     previsao =classificador.predict(novo)
 
     a = np.array(previsao).tolist()
-   
-    return json.dumps({"prediction": a})
+
+    if  previsao > 0.5:
+        a = "Positivo"
+    else:
+        a = "Negativo"
+    
+    return json.dumps({"prediction":a})
