@@ -1,4 +1,4 @@
-virtualenv==16.0.0
+virtualenv==20.26.6
 pytest==3.8.1
 marshmallow
 coverage==4.5.1
